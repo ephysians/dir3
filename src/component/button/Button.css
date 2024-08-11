@@ -1,0 +1,80 @@
+/* src/components/Button.css */
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 0.3125rem;
+  font-size: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+/* Button Variants */
+.btn-primary {
+  background-color: #000080;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+/* Button Sizes */
+.btn-small {
+  padding: 4px 8px;
+  font-size: 0.875rem;
+}
+
+.btn-medium {
+  padding: 8px 24px;
+  font-size: 1rem;
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: 1.25rem;
+}
+
+/* Disabled Button */
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Loading State */
+.btn:disabled::after {
+  content: ' ';
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top: 2px solid white;
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
